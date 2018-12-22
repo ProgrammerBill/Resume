@@ -1,0 +1,336 @@
+\documentclass[10pt]{article}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{geometry} 		% 設定邊界
+\usepackage{mathpazo}
+
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage[many]{tcolorbox}
+\usepackage[export]{adjustbox}
+% for color tables
+\usepackage{float}
+\usepackage{colortbl}
+\definecolor{tableheadercolor}{rgb}{1.0, 1.0, 0.6}
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1 @{}}#2\end{tabular}}
+
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+
+\geometry{
+  top=1cm,
+  inner=1in,
+  outer=1in,
+  bottom=1.5cm,
+  headheight=0ex,
+  marginparwidth=40pt,
+  textwidth=326pt,
+  headsep=10pt,
+}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{caption}
+
+\setlength{\titlewidth}{1.0\textwidth}
+
+\newcommand{\sectionfont}{\Huge\bfseries}
+\newcommand{\subsectionfont}{\LARGE\bfseries}
+
+\titleformat{\section}{\sectionfont}{}{0em}{}
+			[\rule{0.8\textwidth}{2pt}]
+			\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\titleformat{\subsection}{\subsectionfont}{}{0em}{}
+			[\rule{\titlewidth}{1.2pt}]
+			\titlespacing{\subsection}{0pt}{3pt}{3pt}
+
+
+\let\oldtitleline\titleline
+\renewcommand{\titleline}{\oldtitleline*}
+
+
+%\titleformat*{\section}{\Huge}
+%\titleformat*{\subsection}{\LARGE}
+\titleformat*{\subsubsection}{\large}
+\titleformat*{\paragraph}{\normalsize}
+
+%列表符号
+\usepackage{enumitem}
+\setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{2.8em}{3.2em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{4.0em}{4.1em}}
+\renewcommand*\l@paragraph{\@dottedtocline{4}{5em}{5em}}
+\renewcommand*\l@subparagraph{\@dottedtocline{5}{6em}{6em}}
+\makeatother
+
+
+%set the picture format
+\makeatletter
+\def\beginDraw{
+	\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+	}
+\def\endDraw{
+}
+\makeatother
+
+
+\makeatletter
+\setlength\@fptop{0pt}
+\setlength\@fpsep{8pt plus 1fil}
+\setlength\@fpbot{0pt}
+\makeatother
+
+
+%Color 颜色
+\usepackage{xcolor}
+\definecolor{ultramarine}{RGB}{0,32,96}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+$if(euro)$
+  \usepackage{eurosym}
+$endif$
+\else % if luatex or xelatex
+  \usepackage{fontspec} 	% 允許設定字體
+  \usepackage{xeCJK} 		% 分開設置中英文字型
+
+  \setCJKmainfont{黑体}
+  \setmainfont{Times New Roman} 	% 設定英文字型
+  \setromanfont{Times New Roman} 	% 字型
+  \setmonofont{Times New Roman}
+  \linespread{1.0}\selectfont 	% 行距
+  \XeTeXlinebreaklocale "zh" 	% 針對中文自動換行
+  \XeTeXlinebreakskip = 0pt plus 1pt % 字與字之間加入0pt至2pt的間距，確保左右對整齊
+  \setlength{\parskip}{0pt} 	% 段落之間的距離
+
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+$if(mainfont)$
+    \setmainfont{$mainfont$}
+$endif$
+$if(sansfont)$
+    \setsansfont{$sansfont$}
+$endif$
+$if(monofont)$
+    \setmonofont{$monofont$}
+$endif$
+$if(mathfont)$
+    \setmathfont{$mathfont$}
+$endif$
+\fi
+
+
+\usepackage{listings}
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=single,
+	keepspaces=true,
+	xleftmargin=\parindent,
+	language=C++,
+	showstringspaces=false,
+	commentstyle=\itshape\color{purple!40!black},
+	backgroundcolor=\color{black!8}, % set backgroundcolor
+	basicstyle=\selectfont\footnotesize,
+	showspaces=false,
+	showstringspaces=false,
+	tabsize=2,
+	xleftmargin=5pt,
+	xrightmargin=3pt,
+	aboveskip=20pt,
+	rulecolor=\color{black!8},
+}
+
+
+\lstset { %
+	style=customc
+}
+
+
+
+% use microtype if available
+%\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+$endif$
+$if(biblatex)$
+\usepackage{biblatex}
+$if(biblio-files)$
+\bibliography{$biblio-files$}
+$endif$
+$endif$
+$if(listings)$
+\usepackage{listings}
+$endif$
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
+$endif$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+$if(verbatim-in-note)$
+\usepackage{fancyvrb}
+$endif$
+$if(tables)$
+\usepackage{longtable}
+$endif$
+$if(graphics)$
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancybox}
+$endif$
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+\usepackage{ifthen}%这个宏包提供逻辑判断命令
+\newboolean{first}%定义一个布尔变量用于判断是否为首页
+\setboolean{first}{true}%设定fist变量初值为true
+
+
+%正文页眉页脚设定
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{} \chead{} \rhead{}
+\lfoot{} \cfoot{-~\thepage~-} \rfoot{}
+
+\fancypagestyle{plain}{
+\setboolean{first}{false}
+\rhead{
+	\includegraphics[height=3.8cm]{portrait/portrait.png}
+}
+\chead{} \lhead{}
+\lfoot{} \cfoot{-~\thepage~-} \rfoot{}
+}
+
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={$author-meta$},
+            pdftitle={$title-meta$},
+            colorlinks=true,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+$endif$
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+\usepackage{titling}
+\setlength{\droptitle}{-8em} 	% 將標題移動至頁面的上面
+
+$if(numbersections)$
+\setcounter{secnumdepth}{5}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
+
+\usepackage{verbatim}
+\usepackage{varwidth}
+\newenvironment{centerverbatim}{
+	\par
+	\centering
+	\varwidth{\linewidth}
+	\verbatim
+}{
+	\endverbatim
+	\endvarwidth
+	\par
+}
+
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+$if(lang)$
+\ifxetex
+  \usepackage{polyglossia}
+  \setmainlanguage{$mainlang$}
+\else
+  \usepackage[$lang$]{babel}
+\fi
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+%$if(title)$
+%\title{$title$}
+%$endif$
+%\author{$for(author)$$author$$sep$ \and $endfor$}
+
+\date{$date$}
+
+%\maketitle
+\thispagestyle{plain}
+
+\begin{document}
+
+$body$
+
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
