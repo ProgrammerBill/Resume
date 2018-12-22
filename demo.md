@@ -1,43 +1,57 @@
-# XXX (English Name)
 
-### XXX工程师
+# 中文名字 (English Name)
 
-- 联系电话: +86 xxxxxxxx
-- 电子邮箱: [xxxxx@gmail.com](xxxx@gmail.com)
-- 个人博客: [www.xxxx.com](www.xxxxx.com)
-- GitHub: [https://github.com/XXX](https://github.com/XXX)
+|||
+|--------------------------|------------------------------------|
+|联系电话: 15800000000|所在地点: 广东珠海|
+|工作年限: x年|职业状态: 在职-考虑机会|
+|电子邮箱: xxxxxx@gmail.com|个人博客: www.xxx.com|
+|求职意向: Android Framework开发||
 
-## 工作经验 (Experience)
+## 工作经历 (Experience)
 
-### **XXX软件工程师** [XXXX](http://www.xxx.com)
+###公司名 (部门名)###
 
-*xxxxx - xxxxx*
+|||||||
+|-|-|-|-|-|-|
+|工作职位:|Android软件设计工程师|公司行业:|xxxx|工作期限:|2016/7 - 至今|
 
-- 参与xxxxxxx
-- 参与xxxxxxx
-- 参与xxxxxxx
-- 参与xxxxxxx
+- 职责1:
+- 职责2:
+- 职责3:
+
+## 项目经历 (Projects)
+
+*2016/09 - 2016/10*\ \ \ \ 项目一
+
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+
+*2016/11 - 2017/10*\ \ \ \ 项目二
+
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+
+*2017/11 - 至今*\ \ \ \ 项目三
+
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+- 负责xxx项目的xxx工作
+
 
 ## 技能专长 (Skills)
 
-### 编程语言
-
-常用[Java](https://www.java.com), [C/C++](http://www.cplusplus.com),[Shell](http://www.linuxshell.it), [Python](https://www.python.org)
-
-### 熟悉模块
-
-- 熟悉模块XXXXXXXXXX
-- 熟悉模块XXXXXXXXXX
-- 熟悉模块XXXXXXXXXX
-- 熟悉模块XXXXXXXXXX
-- 熟悉模块XXXXXXXXXX
-- 熟悉模块XXXXXXXXXX
+- 掌握xxx模块，xxx模块
+- 熟练使用C++/C,Java
+- 能熟练阅读英文资料，通过大学四、六级考试。
 
 ## 教育经历 (Education)
 
-- *2009 - 2013* [XXXXX大学](https://www.xxxxxxx.cn) XXXXX 本科
-- *2013 - 2016* [XXXXX大学](https://www.xxxxxxx.cn) XXXXX 硕士
+- *2009 - 2013*\ xxxx大学\ xxx专业\ 本科
+- *2013 - 2016*\ xxxx大学\ xxx专业\ 硕士
 
 ## 自我评价 (Summary && Interests)
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+能够独立思考和解决问题，可快速适应新环境，热爱开源，乐于学习新知识，有较强的学习能力。性格开朗，为人和善，能够虚心请教他人问题，善于沟通，抗压能力强。能及时关注业界和相关的开发技术。
